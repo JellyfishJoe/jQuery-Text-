@@ -13,13 +13,11 @@ $(document).ready(function(){
 	*/
 	$('#toggleBtn').click(function(){
 		//$('#legal').fadeToggle();
-		if(hide){
+		if(hide = !hide){ 
 			$('#legal').show();
-			hide = !hide;
 			this.innerHTML = "Hide Text";
 		}else{
 			$('#legal').hide();
-			hide = !hide;
 			this.innerHTML = "Show Text"
 		}
 	})

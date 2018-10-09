@@ -20,7 +20,7 @@ $(document).ready(function(){
 			$('#legal').hide();
 			this.innerHTML = "Show Text"
 		}
-	})
+	});
 
 	//Table stuff
 	$('table').css({
@@ -51,11 +51,48 @@ $(document).ready(function(){
 	$('#classList tbody tr').remove(':contains("Jay")');
 
 
-	$('<p>New Paragraph</p>').insertAfter('div').addClass('bigg');
+	//$('<p>New Paragraph</p>').insertAfter('div').addClass('bigg');
 
-	$('<strong>Big Boys Will Be Big</strong>').prependTo('div');
+	//$('<strong>Big Boys Will Be Big</strong>').prependTo('div');
 
-	$('p').html('The paragraphs have changed');
+	//$('p').html('The paragraphs have changed');
+
+	let hide2 = true;
+
+	$('#switch').click(function(){
+		//$('#stuff').slideToggle();
+		$('#stuff').animate({
+			'font-size':"8px",
+			'margin':"100px",
+			'padding':"25px",
+			'background-color':"#000",
+			'color':"#fff"
+		}, 5000, 'swing');
+		animateAgain();
+	});
+
+	function animateAgain() {
+		$('#stuff').animate({
+			'font-size':"92px",
+			'margin':"0px",
+			'padding':"0px",
+			'background-color':"#fff",
+			'color':"#000"
+		}, 10000, 'swing');
+		animateYetAgain();
+	}
+
+	function animateYetAgain(){
+		$('#stuff').animate({
+			'font-size':"8px",
+			'margin':"100px",
+			'padding':"25px",
+			'background-color':"#000",
+			'color':"#fff"
+		}, 10000, 'swing');
+		animateAgain();
+	}
+
 });
 
 

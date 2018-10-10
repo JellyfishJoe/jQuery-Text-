@@ -71,6 +71,18 @@ $(document).ready(function(){
 		animateAgain();
 	});
 
+	$('#reset').click(function(){
+		console.log('worked');
+		$('#stuff').animate({
+			'font-size': '92px'
+		});
+
+		setTimeout(function(){
+			$(document).delay(3000).scrollTop(500);
+		}, 200)
+		console.log('scrolled');
+	});
+
 	function animateAgain() {
 		$('#stuff').animate({
 			'font-size':"92px",
@@ -92,6 +104,17 @@ $(document).ready(function(){
 		}, 10000, 'swing');
 		animateAgain();
 	}
+
+	$(document).scroll(function(){
+
+		var size = 1 + .06 * $(this).scrollTop() + 'px';
+		console.log(size);
+
+		$('#stuff').css('font-size', size);
+	})
+
+	var $window = $(window);
+	var $nav = $('#navigation');
 
 });
 

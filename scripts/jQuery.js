@@ -68,7 +68,7 @@ $(document).ready(function(){
 			'background-color':"#000",
 			'color':"#fff"
 		}, 5000, 'swing');
-		animateAgain();
+		//animateAgain();
 	});
 
 	$('#reset').click(function(){
@@ -82,7 +82,7 @@ $(document).ready(function(){
 		}, 200)
 		console.log('scrolled');
 	});
-
+/*
 	function animateAgain() {
 		$('#stuff').animate({
 			'font-size':"92px",
@@ -112,10 +112,7 @@ $(document).ready(function(){
 
 		$('#stuff').css('font-size', size);
 	})
-
-	var $window = $(window);
-	var $nav = $('#navigation');
-
+*/
 });
 
 
